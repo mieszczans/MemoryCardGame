@@ -8,12 +8,42 @@
     <link rel="stylesheet" type="text/css" href="main.css">
 </head>
 <body>
-    <div id="wrapper">
-        <div id="start">Start</div>
-        <div id="score"></div>
-        <div id="message"></div>
-        <div id="gameboard"></div>
+    <div id="welcomeScreen" class="welcomeScreen">
+        <header>
+            <h1>Welcome in Brainstorm Memory Card Game</h1>
+        </header>
+        <p>Please write your nickname:</p>
+        <input type="text" id="nick" maxlength="20" autofocus>
+        <button id="start">Start</button>
     </div>
+    <main id="mainContentWrapper" class="mainContentWrapper">
+        <header>
+            <h1>Brainstorm Memory Card Game</h1>
+        </header>
+        <div id="gameboard" class="gameboard">
+            <div class="card card1" id="1"></div>
+            <div class="card card2" id="2"></div>
+            <div class="card card3" id="3"></div>
+            <div class="card card4" id="4"></div>
+            <div class="card card5" id="5"></div>
+            <div class="card card6" id="6"></div>
+            <div class="card card7" id="7"></div>
+            <div class="card card8" id="8"></div>
+            <div class="card card9" id="9"></div>
+            <div class="card card10" id="10"></div>
+            <div class="card card11" id="11"></div>
+            <div class="card card12" id="12"></div>     
+        </div>
+    </main>
+    <footer>
+        <div class="footerWrapper">
+            <span  id="user"></span>
+            <div class="level">Level:1</div>
+            <div class="scores">Scores:<span id="scores">0</span></div>
+            <div class="menu" id="menu">Menu:</div>
+        </div>
+    </footer>
+
     <script src="bundle.js"></script>
 </body>
 </html>
