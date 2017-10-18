@@ -1,5 +1,6 @@
 html, body{
     height: 100vh;
+    box-sizing: border-box;
 }
 body{
     margin: 0;
@@ -18,14 +19,11 @@ body::after{
     content:'';
     animation: thunder-bg 6s infinite;
     position: relative;
-}
-#lightning{
+    background-color: black;
     height: 100vh;
     width: 100vw;
-    /* background-color: black; */
     position: fixed;
     z-index: 1;
-    animation: thunder-bg 6s infinite;
 }
 /* welcome screen style */
 .welcomeScreen,
@@ -71,6 +69,7 @@ main{
     display: flex;
     margin-top:10px;
     order:1;
+    margin-left: 1vw;
 }
 .footerWrapper{
     width: 100%;

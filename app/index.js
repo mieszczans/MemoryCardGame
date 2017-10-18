@@ -41,7 +41,7 @@ let cards = document.querySelectorAll('.card');
     }
 })();
 
-for (var i = 0; i < cards.length; i++) {
+for (let i = 0; i < cards.length; i++) {
     cards[i].addEventListener('click',function listeners(){
         pickCard(this.getAttribute('id'));
     },
@@ -94,8 +94,8 @@ function pickCard(nr){
         function defaultColor(firstCardId,secondCardId){
             let first=document.getElementById(`${firstCardId}`);
             let second=document.getElementById(`${secondCardId}`);
-            first.style.backgroundColor='#39d746';
-            second.style.backgroundColor='#39d746';
+            first.style.backgroundColor='#b4b4b4';
+            second.style.backgroundColor='#b4b4b4';
         }
         function disablePair(firstCardId,secondCardId){
             let first=document.getElementById(`${firstCardId}`);
@@ -109,73 +109,3 @@ function pickCard(nr){
         scores.innerHTML = points;
     }
 }
-
-// function shuffle(cards) {
-    //     for (let i = cards.length - 1; i > 0; i--) {
-    //         const j = Math.floor(Math.random() * (i + 1));
-    //         cards[i].style.order =`${j}`;
-    //     }
-    // };
-
-    //przypisz obrazki na stale, ale wez mieszaj je po order w css
-// let tileImages = [1,2,3,4,5,6,1,2,3,4,5,6];
-// let tileArray = [];
-// const startButton = document.getElementById('start');
-// const gameBoard = document.getElementById('gameboard');
-
-// let gamePlay = false;
-
-// //event listeners
-// startButton.addEventListener('click', startGame);
-
-// //Functions
-// function startGame(){
-//     startButton.style.display='none';
-//     if(!gamePlay){
-//         gamePlay = true;
-//         extendNames();
-//         tileArray = tileImages.concat(tileArray);
-//         shuffleArray(tileArray);
-//         console.log(tileArray);
-//         buildBoard();
-//         clickCard();
-//     }
-//     console.log('started');
-// }
-// //buduje plansze
-// let buildBoard = () =>{
-//     let html = [];
-//     for (let x = 0; x <= tileArray.length-1; x++) {
-//         html += '<div class="gameTile">';
-//         html += '<img id="cards'+x+'" src="../images/back.jpg" class="flipImage"></div></div>';
-//     }
-//     gameBoard.innerHTML = html;
-// }
-// //dodanie rozszerzenia do zdjec
-// let extendNames = (el) =>'images/'+el+'.jpg';
-// tileImages = tileImages.map(extendNames);
-
-// //tasowanie tablicy
-// function shuffleArray(array){
-//     for(let x=array.length-1;x>=0;x--){
-//         let holder = Math.floor(Math.random()*(x+1));
-//         let itemValue = array[x];
-//         tileArray[holder]=itemValue;
-//     }
-//     return tileArray;  
-// };
-
-// //dodanie listenerow do klikniecia
-// let clickCard = ()=>{
-//     let getCards =   document.querySelectorAll('.gameTile');
-//     for (var i = 0; i < getCards.length; i++) {
-//         let result = getCards[i];
-//         result.addEventListener('click', pickCard()
-//         ,
-//         false);
-//     }
-// }
-
-// let pickCard =()=>{
-//     console.log('wybrales karte');
-// }
