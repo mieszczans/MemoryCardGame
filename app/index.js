@@ -1,4 +1,4 @@
-"use strict"
+
 //Starting Page;
 {
     let buttonStart = document.querySelector('#start');
@@ -35,9 +35,6 @@ let cards = document.querySelectorAll('.card');
     for (let i = cards.length - 1; i >= 0; i--) {
         let j = Math.floor(1+Math.random() * (i + 1));
         cards[i].style.order = j;
-
-        console.log(j);
-        // cards[i].style.order =`${j}`;
     }
 })();
 
