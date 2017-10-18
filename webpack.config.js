@@ -3,7 +3,6 @@ module.exports = {
     entry: ['./app/index.js'],
     output:{
         path: path.resolve(__dirname, 'build'),
-        // publicPath: 'http://localhost:8080/images',
         filename: 'bundle.js'
     },
     module:{
@@ -15,7 +14,7 @@ module.exports = {
             },
             {
                test: /\.(jpe?g|png|gif|svg)$/,
-               include : path.join(__dirname, 'images'),
+               include : path.join(__dirname, 'build/images'),
                loader  : 'url-loader',
                query:{
                    limit:10000
